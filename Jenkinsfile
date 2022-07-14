@@ -9,7 +9,7 @@ pipeline {
                     testResults = "${env.WORKSPACE}/results"
 
                     sh "rm -Rf ${testResults} && mkdir -p ${testResults}"
-                    def testImage = docker.build("test/${env.JOB_NAME}:${BUILD_NUMBER}")
+                    def testImage = docker.build("test/${env.JOB_NAME}:${BUILD_NUMBER}", "--target test")
                     testImage.withRun("-v ${testResults}:/opt/results") { c ->
                         echo "Running tests..."
                     }
