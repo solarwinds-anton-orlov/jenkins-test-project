@@ -16,11 +16,15 @@ pipeline {
         }
 
         stage ('Build') {
-            echo 'Building from the source code...'
+            steps {
+                echo 'Building from the source code...'
+            }
         }
 
         stage ('Deploy') {
-            echo 'Deploying artefact...'
+            steps {
+                echo 'Deploying artefact...'
+            }
         }
     }
 }
