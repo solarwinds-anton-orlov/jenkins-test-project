@@ -19,6 +19,10 @@ pipeline {
         stage ('Build') {
             steps {
                 echo 'Building from the source code...'
+                script {
+                    def steadyImage = docker.build("steady/${env.JOB_NAME}:${BUILD_NUMBER}", "--target steady .")
+                    // steadyImage.push()
+                }
             }
         }
 
