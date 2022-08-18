@@ -34,5 +34,5 @@
 //     }
 // }
 version = "vulnerable-feature"
-@Library('mpl-nested@${version}') _
+@Library("mpl-nested@${version}") _
 MPLSimple()
