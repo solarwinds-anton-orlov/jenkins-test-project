@@ -1,3 +1,4 @@
 pipeline_template: pipelines/default.groovy
+version: 1.2
 image_name:
   steady: no-matter
